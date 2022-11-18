@@ -406,6 +406,10 @@
   overflow: hidden;
 }
 
+.form-condition:focus-within {
+  border: 1px solid #2196f3;
+}
+
 .checkbox:checked + .icon {
   display: inline-block;
   background-image: url(../images/icon-check.svg);
