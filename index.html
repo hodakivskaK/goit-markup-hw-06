@@ -74,6 +74,57 @@
                 <use href="./images/icons.svg#icon-close"></use>
               </svg>
             </button>
+
+               <div class="modal-content">
+                <h2 class="modal-title">Залиште свої дані, ми вам передзвонимо</h2>
+
+              <form class="modal-form">
+                <div class="form-field">
+                   <label for="name">Ім'я</label>
+                <input type="text" id="name" required>
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-modal-name">
+                  </use>
+                </svg>
+                </div>
+
+                <div class="form-field">
+                   <label for="phone">Телефон</label>
+                <input type="text" id="phone" required>
+                
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-modal-phone">
+                  </use>
+                </svg>
+                </div>
+
+                <div class="form-field">
+                   <label for="mail">Пошта</label>
+                <input type="text" id="mail" required>
+                <svg class="form-icon">
+                  <use href="./images/icons.svg#icon-modal-mail">
+                  </use>
+                </svg>
+                </div>
+
+               <div class="form-field">
+                <label for="comments">Коментар</label>
+                <textarea name="" id="comments" rows="8" placeholder="Введіть текст"></textarea>
+                </div>
+
+                <div class="form-condition">
+                  <label>
+                  <input class="checkbox" type="checkbox" name="mailing" value="mailing" required />
+                   <svg class="icon" href="./images/icons.svg#icon-modal-check">
+                    <use></use>
+                  </svg>
+                   Погоджуюся з розсилкою та приймаю  <a href="#" class="form-link">Умови договору</a> 
+                   </label>
+                </div>
+
+                <button class="button primary">Відправити</button>
+              </form>
+              </div>
           </div>
         </div>
       </section>
@@ -428,8 +479,6 @@
        </section>
     </main>
 
-   
-
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-main">
@@ -469,6 +518,19 @@
               </svg>
             </a></li>
           </ul>
+        </div>
+      
+
+        <div class="footer-form">
+          <h3 class="social-title">Підпишіться на розсилку</h3>
+
+          
+            <form class="form-wrapper">
+              <label>
+              <input type="text" placeholder="E-mail" class="email-field" required>
+              </label>
+              <button type="button" class="form-button">Підписатися</button>
+            </form>
         </div>
       </div>
     </footer>
