@@ -258,12 +258,11 @@
   border-radius: 50%;
 
   cursor: pointer;
-  transition: box-shadow var(--time-delay) var(--timing-function),
-    fill var(--time-delay) var(--timing-function);
+  transition: box-shadow 2000ms var(--timing-function), fill 5000ms;
 }
-.backdrop .modal-close:hover,
-.backdrop .modal-close:focus {
-  box-shadow: 0px 1px 1px rgb(0 0 0 / 12%);
+
+.icon-close {
+  transition: fill var(--time-delay) var(--timing-function);
 }
 
 .modal-close:hover .icon-close,
@@ -340,13 +339,23 @@
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  outline: transparent;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+.form-field textarea:focus {
   border: 1px solid #2196f3;
 }
 
 .form-field .form-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  height: 15px;
+  width: 15px;
+  fill: #212121;
   transition: fill var(--time-delay) var(--timing-function);
 }
 
@@ -358,14 +367,17 @@
   resize: none;
   padding: 12px 16px;
 
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.01em;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
 }
 
 .form-field textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
 }
 
 .form-condition {
@@ -387,8 +399,9 @@
   cursor: pointer;
 }
 
-.form-condition .form-link {
-  margin-left: 3px;
+.form-condition label p {
+  margin: 0;
+  padding: 0;
 }
 
 .form-condition .checkbox {
@@ -406,11 +419,20 @@
   overflow: hidden;
 }
 
-.form-condition:focus-within {
-  border: 1px solid #2196f3;
+.form-condition .icon-checkbox {
+  margin-right: 9px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-text-color);
+  border-radius: 3px;
 }
 
-.checkbox:checked + .icon {
+.checkbox:focus + .icon-checkbox {
+  border: 2px solid var(--accent-color);
+  transform: scale(1.2);
+}
+
+.checkbox:checked + .icon-checkbox {
   display: inline-block;
   background-image: url(../images/icon-check.svg);
   background-repeat: no-repeat;
@@ -421,22 +443,8 @@
   border: var(--accent-color);
 }
 
-.form-condition .icon {
-  margin-right: 9px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--main-text-color);
-  border-radius: 3px;
-}
-
-.form-field .form-icon {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-
-  height: 15px;
-  width: 15px;
-  fill: #212121;
+.form-condition .form-link {
+  color: var(--accent-color);
 }
 
 /* services section */
